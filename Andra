@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Bold Italic Underline</title>
+</head>
+    
+<body style="background-color: blue;">  
+    <h1 style="font-family:montserrat">heading level 1</h1>
+    <h2>heading level 2</h2>
+    <h3 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: aqua; font-size: 70px">heading level 3</h3>
+    <h4>heading level 4</h4>
+    <h5>heading level 5</h5>
+    <h6>heading level 6</h6>
+
+    <p>ini<br>paragraf<br>menggunakan br</p>
+
+    <p><b>ini adalah tulisan tebal</b></p>
+    <p><i>ini adalah tulisan miring</i></p>
+    <p><u>ini adalah tulisan garis bawah</u></p>
+    <p><b><i>ini adalah tulisan tebal dan miring</i></b></p>
+    <p><b><u>ini adalah tulisan tebal dan garis bawah</u></b></p>
+
+    <p>ini<sub>subcript</sub> dan <sup> supercript</sup></p>
+</body>
+
+<footer>
+    </footer>
+</html>
