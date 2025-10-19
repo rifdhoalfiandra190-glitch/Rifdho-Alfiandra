@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lirik Lagu Running</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #00ffcc;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      flex-direction: column;
+    }
+
+    .lyrics-container {
+      position: relative;
+      width: 100%;
+      height: 50px;
+      overflow: hidden;
+    }
+
+    .lyric-line {
+      position: absolute;
+      white-space: nowrap;
+      animation: scrollText 10s linear infinite;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    @keyframes scrollText {
+      from {
+        left: 100%;
+      }
+      to {
+        left: -100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Lirik Lagu - Teks Berjalan Per Lirik</h2>
+
+  <div class="lyrics-container">
+    <div class="lyric-line" id="lyricLine">Menampilkan lirik...</div>
+  </div>
+
+  <script>
+    const lyrics = [
+      "sudah terbiasa terjadi tanteeeee...",
+      "teman datang ketika lagi butuh sajaaa...",
+      "coba kalo lagi susahhhh...",
+      "mereka semua menghilanggggggg...",
+      "tanteeeeeee..."
+    ];
+
+    let currentLine = 0;
+    const lyricElement = document.getElementById("lyricLine");
+
+    function showNextLyric() {
+      lyricElement.textContent = lyrics[currentLine];
+      lyricElement.style.animation = 'none'; // Reset animasi
+      void lyricElement.offsetWidth; // Trigger reflow
+      lyricElement.style.animation = ''; // Jalankan ulang animasi
+
+      currentLine = (currentLine + 1) % lyrics.length;
+    }
+
+    // Tampilkan lirik pertama dan terus lanjut setiap 1 detik
+    showNextLyric();
+    setInterval(showNextLyric, 10000); // 1 detik per lirik
+  </script>
+
+</body>
+</html>
